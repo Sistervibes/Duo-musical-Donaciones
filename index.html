@@ -21,6 +21,13 @@
         .container {
             padding: 40px;
         }
+        .donate-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
         .donate-button {
             background-color: #ff6600;
             color: white;
@@ -30,6 +37,20 @@
             border-radius: 5px;
             display: inline-block;
             margin-top: 20px;
+            cursor: pointer;
+            border: none;
+        }
+        .hidden {
+            display: none;
+            font-size: 18px;
+            margin-top: 10px;
+            color: #333;
+        }
+        .social-links a {
+            margin: 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
         }
         footer {
             background-color: #333;
@@ -40,6 +61,11 @@
             bottom: 0;
         }
     </style>
+    <script>
+        function mostrarBizum() {
+            document.getElementById('bizum').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -49,10 +75,25 @@
     <div class="container">
         <img src="imagen-banda.jpg" alt="Nuestra banda" width="80%">
         <p>Somos una banda emergente con muchas ganas de compartir nuestra música con el mundo. Tu apoyo nos ayudará a grabar nuestro primer EP.</p>
-        <a class="donate-button" href="https://www.paypal.com/donate">Haz una Donación</a>
+        
+        <div class="donate-section">
+            <h2>Haz una Donación</h2>
+            <button class="donate-button" onclick="mostrarBizum()">Mostrar número de Bizum</button>
+            <p id="bizum" class="hidden">Número de Bizum: <strong>625711625</strong></p>
+        </div>
+        
+        <h2>Nuestras Redes Sociales</h2>
+        <div class="social-links">
+            <a href="https://instagram.com/tubanda" target="_blank">Instagram</a>
+            <a href="https://tiktok.com/@tubanda" target="_blank">TikTok</a>
+            <a href="https://youtube.com/tubanda" target="_blank">YouTube</a>
+        </div>
+        
+        <h2>Últimas Noticias</h2>
+        <p>Pronto compartiremos avances de nuestras nuevas canciones. ¡Síguenos para más información!</p>
     </div>
     <footer>
-        Síguenos en redes sociales | Contacto: contacto@tubanda.com
+        Contacto: contacto@tubanda.com
     </footer>
 </body>
 </html>
